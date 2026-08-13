@@ -1,15 +1,16 @@
 # Dependencies
-/node_modules
+node_modules/
 
 # Production
-/build
+build/
 
-# Generated files
-.docusaurus
-.cache-loader
+# Docusaurus generated files
+.docusaurus/
+.cache-loader/
 
 # Misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local

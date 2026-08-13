@@ -1,13 +1,19 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
   width: 100%;
+  background: transparent;
 }
 
 .buttons {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 1rem;
 }
 
 .featureSvg {

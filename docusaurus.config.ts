@@ -82,10 +82,16 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          type: "doc",
+          docId: "Informe-1",
           position: "left",
           label: "Informe 1",
+        },
+        {
+          type: "doc",
+          docId: "Informe-2",
+          position: "left",
+          label: "Informe 2",
         },
       ],
     },

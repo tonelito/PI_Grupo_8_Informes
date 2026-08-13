@@ -15,6 +15,12 @@ export default function HomepageFeatures(): ReactNode {
           >
             Informe 1 - Mantenimiento de una computadora
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/Informe-2"
+          >
+            Informe 2 - Dualboot con Linux y Redes
+          </Link>
         </div>
       </div>
     </section>

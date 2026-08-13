@@ -10,13 +10,8 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  const heroBg = useBaseUrl("/img/hero-bg.png");
   return (
-    <header
-      className={clsx("hero", styles.heroBanner)}
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
+    <header className={clsx("hero", styles.transparentBackground)}>
       <div className={clsx("container", styles.heroContent)}>
         <Heading as="h1" className="hero__title">
           {"Universidad San Carlos de Guatemala"}
@@ -32,12 +27,17 @@ function HomepageHeader() {
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  const heroBg = useBaseUrl("/img/hero-bg.png");
   return (
     <Layout title={` ${siteConfig.title}`}>
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <div className={styles.pageBackground}>
+        <img src={heroBg} alt="" className={styles.pageBackgroundImg} />
+        <div className={styles.pageBackgroundOverlay} />
+        <HomepageHeader />
+        <main className={styles.mainContent}>
+          <HomepageFeatures />
+        </main>
+      </div>
     </Layout>
   );
 }

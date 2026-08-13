@@ -3,22 +3,41 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 5rem 0;
-  text-align: center;
+.pageBackground {
   position: relative;
+  min-height: 100vh;
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
 }
 
-.heroBanner::before {
-  content: "";
+.pageBackgroundImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.pageBackgroundOverlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
   z-index: 0;
+}
+
+.transparentBackground {
+  background: transparent;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 1;
 }
 
 .heroContent {
@@ -46,7 +65,7 @@
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
+  .transparentBackground {
     padding: 2rem;
   }
 }
