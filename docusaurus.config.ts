@@ -93,6 +93,12 @@ const config: Config = {
           position: "left",
           label: "Informe 2",
         },
+        {
+          type: "doc",
+          docId: "Informe-3",
+          position: "left",
+          label: "Informe 3",
+        },
       ],
     },
     prism: {

@@ -21,6 +21,12 @@ export default function HomepageFeatures(): ReactNode {
           >
             Informe 2 - Dualboot con Linux y Redes
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/Informe-3"
+          >
+            Informe 3 - Contenedores con Docker
+          </Link>
         </div>
       </div>
     </section>
