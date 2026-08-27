@@ -1,0 +1,59 @@
+---
+sidebar_position: 3
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+# Informe 3: Contenedores con Docker
+
+Este informe documenta el proceso de creación y despliegue de aplicaciones
+mediante contenedores con Docker. Se desarrolló una aplicación cliente-servidor
+capaz de realizar un CRUD básico de usuarios, consumiendo una base de datos
+MySQL. Se construyeron las imágenes de las aplicaciones cliente y servidor,
+las cuales fueron publicadas en DockerHub, y se documentó el uso de
+Dockerfile, Docker Compose y los comandos esenciales de Docker.
+
+## Manual de uso de Docker
+
+Como material de apoyo, se preparó un manual que explica qué es Docker, la
+diferencia con una máquina virtual, la creación de imágenes mediante
+Dockerfile (incluyendo builds multi-stage), la publicación de imágenes en
+DockerHub, los comandos esenciales para construir, ejecutar e inspeccionar
+contenedores, y el uso de Docker Compose para levantar toda la aplicación con
+un solo comando.
+
+<a
+  className="button button--primary button--lg"
+  href={useBaseUrl("/files/ManualDocker.pdf")}
+  download
+>
+  {"Descargar manual (PDF)"}
+</a>
+
+## Video tutorial
+
+<div
+  style={{
+    position: "relative",
+    paddingBottom: "56.25%",
+    height: 0,
+    overflow: "hidden",
+    maxWidth: "100%",
+    margin: "1.5rem 0",
+  }}
+>
+  <iframe
+    src="https://www.youtube.com/embed/z65TlK4zxC8"
+    title="Video de contenedores con Docker - Grupo 8"
+    style={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+    }}
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
+</div>
