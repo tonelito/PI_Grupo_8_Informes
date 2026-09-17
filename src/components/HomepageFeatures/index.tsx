@@ -27,6 +27,12 @@ export default function HomepageFeatures(): ReactNode {
           >
             Informe 3 - Contenedores con Docker
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/Informe-4"
+          >
+            Informe 4 - Récord de Catedráticos
+          </Link>
         </div>
       </div>
     </section>

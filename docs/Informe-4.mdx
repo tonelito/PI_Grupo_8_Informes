@@ -1,0 +1,50 @@
+---
+sidebar_position: 4
+---
+
+# Informe 4: Récord de Catedráticos (Aplicación Web)
+
+Este informe documenta el desarrollo de una aplicación web de arquitectura
+cliente-servidor que permite a los estudiantes de la Facultad de Ingeniería
+consultar y compartir un récord de los catedráticos y auxiliares que han
+impartido cursos del área de sistemas, como alternativa centralizada al
+grupo de Facebook usado tradicionalmente para este fin.
+
+La aplicación permite a los usuarios registrarse e iniciar sesión, crear
+publicaciones sobre un catedrático o un curso, comentar las publicaciones de
+otros usuarios, filtrar publicaciones por curso o catedrático, y consultar
+perfiles de usuario donde se administran los cursos aprobados y los créditos
+acumulados.
+
+## Arquitectura
+
+- **Cliente (Frontend):** ReactJS, encargado de la interfaz con la que
+  interactúan los usuarios.
+- **Servidor (Backend):** NodeJS, expuesto como un servicio REST API que
+  consumen los clientes.
+- **Base de datos:** MySQL, donde se almacena toda la información de
+  usuarios, catedráticos, cursos, publicaciones y comentarios.
+
+## Funcionalidades principales
+
+- Registro de usuarios e inicio de sesión con recuperación de contraseña.
+- Pantalla principal con publicaciones ordenadas por fecha de creación y
+  filtros por curso y por catedrático.
+- Creación de publicaciones asociadas a un catedrático o a un curso.
+- Comentarios sobre las publicaciones para enriquecer la retroalimentación.
+- Perfiles de usuario con búsqueda por número de registro, edición de datos
+  personales y administración de cursos aprobados con su total de créditos.
+
+## Repositorio del proyecto
+
+Todo el código fuente del cliente, el servidor y la documentación del
+proyecto se encuentra disponible en el siguiente repositorio de GitHub:
+
+<a
+  className="button button--primary button--lg"
+  href="https://github.com/tonelito/record-catedraticos"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver Repositorio en GitHub
+</a>
