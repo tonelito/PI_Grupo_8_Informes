@@ -1,0 +1,67 @@
+---
+sidebar_position: 5
+---
+
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+# Informe 5: Proyecto Final – Fase 1
+
+Este informe documenta la primera fase del proyecto final de Prácticas
+Iniciales: el montaje de una infraestructura de red con servicios de Windows
+Server sobre dos computadoras físicas, cada una con máquinas virtuales para el
+servidor y los clientes. Se configuró el dominio local `servidor1.com` y los
+servicios de usuarios, recursos compartidos, correo electrónico, web y FTP,
+integrando un cliente Linux (Ubuntu) unido al dominio para validar su
+funcionamiento.
+
+## Servicios configurados
+
+- **Punto 1 – Servidor de virtualización:** VirtualBox con el servidor
+  `SRV1` (192.168.0.20) y los clientes `CLI-WIN` y `CLI-LINUX` en red mediante
+  adaptador puente.
+- **Punto 2 – Servidor de usuarios:** DNS con zona directa e inversa para
+  `servidor1.com`, Active Directory con las cuentas de usuario, una política de
+  grupo global (fondo de pantalla institucional, unidad de red y título en el
+  navegador) y un servidor DHCP que asigna direcciones de la `192.168.0.26` a la
+  `192.168.0.100`, reservando de la `.1` a la `.25`.
+- **Punto 3 – Recursos compartidos:** `CarpetaPública` con acceso total para
+  los usuarios del dominio y `CarpetaPrivada` restringida al usuario `privado`,
+  verificadas desde Ubuntu mediante SMB.
+- **Punto 4 – Servidor de correo electrónico:** hMailServer con SMTP y POP3,
+  cuentas integradas al Active Directory y Thunderbird configurado en el
+  cliente Linux para enviar y recibir correos entre `correo1` y `correo2`.
+- **Punto 6 – Servidor web:** IIS con el directorio virtual `publicweb`, el
+  sitio `privadaweb` en el puerto 1080 con autenticación básica, y el
+  directorio `correo` que redirige al webmail.
+- **Punto 8 – Servidor FTP:** sitio FTP nativo de IIS sobre la carpeta
+  pública, con acceso de lectura y escritura para `usuario1` y `usuario2`.
+
+## Manual técnico
+
+Como material de apoyo, se preparó un manual técnico que describe la
+arquitectura de la solución, el hardware y software utilizado, la
+configuración paso a paso de cada servicio con capturas de pantalla, las
+pruebas integrales de funcionamiento y las incidencias encontradas junto con
+su solución.
+
+<a
+  className="button button--primary button--lg"
+  href={useBaseUrl("/files/ManualTecnicoProyectoFinalFase1.pdf")}
+  download
+>
+  {"Descargar manual técnico (PDF)"}
+</a>
+
+## Repositorio del proyecto
+
+La documentación completa del proyecto se encuentra disponible en el
+siguiente repositorio de GitHub:
+
+<a
+  className="button button--primary button--lg"
+  href="https://github.com/tonelito/PI_Proyecto_Final"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver Repositorio en GitHub
+</a>

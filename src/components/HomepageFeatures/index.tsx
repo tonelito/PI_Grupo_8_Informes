@@ -33,6 +33,12 @@ export default function HomepageFeatures(): ReactNode {
           >
             Informe 4 - Récord de Catedráticos
           </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs/Informe-5"
+          >
+            Informe 5 - Proyecto Final Fase 1
+          </Link>
         </div>
       </div>
     </section>

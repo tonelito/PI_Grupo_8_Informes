@@ -105,6 +105,12 @@ const config: Config = {
           position: "left",
           label: "Informe 4",
         },
+        {
+          type: "doc",
+          docId: "Informe-5",
+          position: "left",
+          label: "Informe 5",
+        },
       ],
     },
     prism: {
